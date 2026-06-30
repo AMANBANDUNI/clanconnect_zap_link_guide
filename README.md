@@ -21,7 +21,7 @@ and `assets/screens/`), so you can open or ship either one on its own.
 
 | Module | Covers |
 | --- | --- |
-| [`zap-link/`](zap-link/index.html) | **Using Zap Link** — overview, Instagram setup, choosing a content type, selecting posts/stories, building rules (keywords + comment replies), Direct Message vs ⚡ Zap Link product cards, publishing & managing in *My Zaps*. |
+| [`zap-link/`](zap-link/index.html) | **Zap Tour** — overview, Instagram setup, choosing a content type, selecting posts/stories, building rules (keywords + comment replies), Direct Message vs ⚡ Zap Link product cards, publishing & managing in *My Zaps*. |
 | [`zap-link-analytics/`](zap-link-analytics/index.html) | **Zap Link Analytics** — opening the panel (Interactions + date range), the *My Zap Links* funnel (DMs Sent → Opened → Unique/Total Clicks), *My Zap Linked Products*, *Automations*, *My Earnings*, and the *Interaction Tracking* drill-down (flow + catalogue with short codes). |
 
 ## Structure
