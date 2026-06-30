@@ -3,456 +3,67 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>ClanConnect Zap — Interactive Guide</title>
-<meta name="description" content="A step-by-step interactive guide on how to use Zap (Instagram DM automation) in the ClanConnect app." />
+<title>ClanConnect Zap — Guides</title>
+<meta name="description" content="Interactive guides for ClanConnect Zap — using Zap Link and reading Zap Link Analytics." />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css" />
+<style>
+  :root { --brand:#1774B2; --ink:#0f2230; --muted:#5b6b78; --bg:#f4f8fb; --card:#fff; --line:#e3edf4; }
+  * { box-sizing:border-box; }
+  body { margin:0; font-family:"Open Sans",system-ui,sans-serif; color:var(--ink);
+         background:radial-gradient(1200px 600px at 50% -10%, #e8f3fb, var(--bg)); min-height:100vh; }
+  .wrap { max-width:980px; margin:0 auto; padding:72px 22px 60px; }
+  .top { text-align:center; margin-bottom:48px; }
+  .badge { display:inline-block; font-size:13px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+           color:var(--brand); background:#e8f3fb; padding:6px 14px; border-radius:999px; }
+  h1 { font-family:"Poppins",sans-serif; font-weight:800; font-size:clamp(30px,5vw,46px); margin:18px 0 10px; }
+  h1 .g { background:linear-gradient(90deg,#1774B2,#33b1e8); -webkit-background-clip:text; background-clip:text; color:transparent; }
+  .sub { color:var(--muted); font-size:18px; max-width:640px; margin:0 auto; }
+  .cards { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-top:44px; }
+  @media (max-width:720px){ .cards{ grid-template-columns:1fr; } .wrap{ padding-top:48px; } }
+  .card { display:flex; flex-direction:column; background:var(--card); border:1px solid var(--line);
+          border-radius:20px; padding:28px; text-decoration:none; color:inherit;
+          box-shadow:0 10px 30px rgba(23,116,178,.08); transition:transform .18s, box-shadow .18s, border-color .18s; }
+  .card:hover { transform:translateY(-4px); box-shadow:0 18px 44px rgba(23,116,178,.16); border-color:#bfe0f3; }
+  .ico { width:54px; height:54px; border-radius:14px; display:grid; place-items:center; font-size:26px;
+         background:linear-gradient(135deg,#1774B2,#33b1e8); color:#fff; margin-bottom:18px; }
+  .card h2 { font-family:"Poppins",sans-serif; font-size:22px; margin:0 0 8px; }
+  .card p { color:var(--muted); margin:0 0 18px; flex:1; line-height:1.55; }
+  .meta { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+  .chip { font-size:12px; font-weight:600; color:#3a5564; background:#eef5fa; border:1px solid var(--line);
+          padding:4px 10px; border-radius:999px; }
+  .go { font-weight:700; color:var(--brand); }
+  .foot { text-align:center; color:var(--muted); font-size:13px; margin-top:54px; }
+</style>
 </head>
 <body>
-
-<!-- ===== Progress bar ===== -->
-<div class="scroll-progress" id="scrollProgress"></div>
-
-<!-- ===== Top nav ===== -->
-<header class="topbar">
-  <a class="brand" href="#top">
-    <span class="bolt" aria-hidden="true">⚡</span>
-    <span class="brand-text">ClanConnect <strong>Zap</strong></span>
-  </a>
-  <nav class="topnav" id="topnav">
-    <a href="#overview">Overview</a>
-    <a href="#prereq">Setup</a>
-    <a href="#choose">Choose Type</a>
-    <a href="#select">Select Content</a>
-    <a href="#rules">Rules</a>
-    <a href="#zaplink">Zap Link</a>
-    <a href="#publish">Publish</a>
-  </nav>
-  <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
-</header>
-
-<!-- ===== Hero ===== -->
-<section class="hero" id="top">
-  <div class="hero-inner">
-    <div class="hero-copy">
-      <span class="eyebrow">Influencer Tools · Instagram DM Automation</span>
-      <h1>How to use <span class="grad">Zap</span></h1>
-      <p class="lead">
-        Zap turns a single Instagram comment into an automatic DM. When a follower comments
-        a keyword on your Post, Reel, or Story, ClanConnect instantly replies to the comment
-        <em>and</em> slides into their DMs — with your message or a rich <strong>Zap&nbsp;Link</strong> product card.
-      </p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="#overview">Start the walkthrough</a>
-        <a class="btn btn-ghost" href="#zaplink">Jump to Zap&nbsp;Link →</a>
-      </div>
-      <div class="hero-stats">
-        <div><strong>2</strong><span>steps to live</span></div>
-        <div><strong>3</strong><span>content types</span></div>
-        <div><strong>≤10</strong><span>products / rule</span></div>
-      </div>
+  <div class="wrap">
+    <div class="top">
+      <span class="badge">⚡ ClanConnect Zap</span>
+      <h1>Zap <span class="g">Guides</span></h1>
+      <p class="sub">Self-contained, interactive walkthroughs of the ClanConnect Zap flow — open either guide, no setup needed.</p>
     </div>
-    <div class="hero-phone">
-      <div class="phone">
-        <div class="phone-notch"></div>
-        <img src="assets/screens/01-zap-home.jpeg" alt="Zap home screen with Create New Zap options" />
-      </div>
-      <div class="phone-glow"></div>
+
+    <div class="cards">
+      <a class="card" href="zap-link/index.html">
+        <div class="ico">⚡</div>
+        <h2>Using Zap Link</h2>
+        <p>Turn an Instagram comment into an automatic DM — set up keywords, comment replies, and rich Zap&nbsp;Link product cards.</p>
+        <div class="meta"><span class="chip">Setup</span><span class="chip">Rules</span><span class="chip">Zap Link</span><span class="chip">Publish</span></div>
+        <span class="go">Open the guide →</span>
+      </a>
+
+      <a class="card" href="zap-link-analytics/index.html">
+        <div class="ico">📊</div>
+        <h2>Zap Link Analytics</h2>
+        <p>Read your results — DMs sent &amp; opened, unique vs total clicks, top products, per-automation stats, earnings and interaction drill-downs.</p>
+        <div class="meta"><span class="chip">Funnel</span><span class="chip">Products</span><span class="chip">Automations</span><span class="chip">Earnings</span></div>
+        <span class="go">Open the guide →</span>
+      </a>
     </div>
+
+    <p class="foot">Screens captured from the ClanConnect mobile app · Primary color #1774B2</p>
   </div>
-</section>
-
-<main>
-
-<!-- ===== Recap / Cheat sheet (top) ===== -->
-<section class="chapter recap" id="recap">
-  <div class="chapter-head">
-    <span class="kicker">Cheat sheet</span>
-    <h2>The whole flow at a glance</h2>
-  </div>
-  <ol class="recap-list">
-    <li><span>1</span>Open the <b>Zap</b> tab → <b>Create New Zap</b>.</li>
-    <li><span>2</span>Pick <b>Post/Reel</b>, <b>Story</b>, or <b>Live</b>.</li>
-    <li><span>3</span>Connect Instagram &amp; allow <b>message access</b> (one-time).</li>
-    <li><span>4</span><b>Step 1:</b> select the posts/stories to watch.</li>
-    <li><span>5</span><b>Step 2:</b> name it, then <b>+ Add Rule</b>.</li>
-    <li><span>6</span>Add <b>keywords</b> + optional <b>comment replies</b>.</li>
-    <li><span>7</span>Choose <b>Direct Message</b> or <b>⚡ Zap Link</b> (paste product URLs).</li>
-    <li><span>8</span>Tap <b>Add Rule</b> → <b>Create Automation</b>. Done!</li>
-  </ol>
-</section>
-
-<!-- ===== Overview ===== -->
-<section class="chapter" id="overview">
-  <div class="chapter-head">
-    <span class="kicker">The big picture</span>
-    <h2>What Zap does</h2>
-    <p class="chapter-sub">
-      Find Zap from the bottom tab bar (the ⚡ icon). Everything below happens inside this tab.
-    </p>
-  </div>
-
-  <div class="flow">
-    <div class="flow-step"><span class="flow-num">1</span><p>A follower <strong>comments a keyword</strong> on your post / story (e.g. <code>LINK</code>).</p></div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step"><span class="flow-num">2</span><p>Zap <strong>auto-replies to the comment</strong> publicly (e.g. “Please check your DM”).</p></div>
-    <div class="flow-arrow">→</div>
-    <div class="flow-step"><span class="flow-num">3</span><p>Zap sends a <strong>private DM</strong> — a text message or a <strong>Zap Link</strong> product card.</p></div>
-  </div>
-
-  <div class="callout callout-info">
-    <span class="callout-icon">💡</span>
-    <div>
-      <strong>Two DM styles, one rule.</strong> Every rule lets you choose between a plain
-      <b>Direct Message</b> (free text, links allowed) or a <b>Zap Link</b> (auto-fetched product
-      cards with image, price &amp; discount). This guide covers both.
-    </div>
-  </div>
-</section>
-
-<!-- ===== Prerequisite ===== -->
-<section class="chapter alt" id="prereq">
-  <div class="chapter-head">
-    <span class="kicker">Before you begin</span>
-    <h2>Connect Instagram &amp; allow message access</h2>
-    <p class="chapter-sub">
-      Zap needs a connected Instagram <strong>Business/Creator</strong> account and one Instagram-side
-      permission. If it’s missing, the app shows the <em>“Important Instagram Setting”</em> sheet.
-    </p>
-  </div>
-
-  <div class="split">
-    <figure class="shot">
-      <div class="phone phone-sm">
-        <img src="assets/screens/02-ig-setting-modal.jpeg" alt="Important Instagram Setting bottom sheet" />
-      </div>
-      <figcaption>The “Important Instagram Setting” sheet</figcaption>
-    </figure>
-    <div class="split-copy">
-      <h3>Turn on “Allow access to Messages”</h3>
-      <p>Inside the Instagram app:</p>
-      <ol class="steps">
-        <li>Open <strong>Instagram</strong> → <strong>Menu</strong>.</li>
-        <li><strong>Settings and activity</strong> → <strong>Messages and story replies</strong>.</li>
-        <li><strong>Message Controls</strong> → <strong>Connected Tools</strong>.</li>
-        <li>Toggle <strong>ON</strong> “Allow access to Messages”.</li>
-        <li>Back in ClanConnect, tap <span class="pill pill-blue">It’s Done!</span></li>
-      </ol>
-      <div class="callout callout-warn">
-        <span class="callout-icon">⚠️</span>
-        <div>No connected account yet? Zap first asks you to <strong>Connect Instagram</strong> and grant
-        the basic, comments &amp; messages permissions before this step appears.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Choose type ===== -->
-<section class="chapter" id="choose">
-  <div class="chapter-head">
-    <span class="kicker">Step 0 · Create New Zap</span>
-    <h2>Pick what to automate</h2>
-    <p class="chapter-sub">
-      On the <strong>Create New Zap</strong> tab, choose the surface your automation listens to.
-      Tapping a card opens the connect / settings check, then the wizard.
-    </p>
-  </div>
-
-  <div class="type-grid">
-    <div class="type-card">
-      <div class="type-ico ico-post">＋⚡</div>
-      <h3>ZAP Post / Reel</h3>
-      <p>Auto-respond to comments with DMs on your Posts &amp; Reels.</p>
-    </div>
-    <div class="type-card">
-      <div class="type-ico ico-story">⚡</div>
-      <h3>ZAP Story</h3>
-      <p>Auto-respond to replies/comments with DMs on your Stories.</p>
-    </div>
-    <div class="type-card type-card-soon">
-      <div class="type-ico ico-live">▶⚡</div>
-      <h3>ZAP Live <span class="soon">often “Coming Soon”</span></h3>
-      <p>Auto-respond with DMs while you’re Live. Availability depends on your account &amp; plan.</p>
-    </div>
-  </div>
-
-  <div class="split reverse">
-    <figure class="shot">
-      <div class="phone phone-sm">
-        <img src="assets/screens/03-post-reel-selected.jpeg" alt="ZAP Post/Reel highlighted with settings sheet" />
-      </div>
-      <figcaption>Tapping a card → the setting check appears</figcaption>
-    </figure>
-    <div class="split-copy">
-      <h3>What happens on tap</h3>
-      <ul class="ticks">
-        <li>The app checks your <strong>plan entitlement</strong> for that content type.</li>
-        <li>It confirms Instagram is <strong>connected</strong> with all permissions.</li>
-        <li>It shows the <strong>message-access</strong> reminder if needed.</li>
-        <li>Then it opens the <strong>2-step wizard</strong>.</li>
-      </ul>
-      <div class="callout callout-info">
-        <span class="callout-icon">🏷️</span>
-        <div>Your <strong>Current Plan</strong> (e.g. <em>Savings</em>) is shown top-right and controls limits like
-        keywords per rule, number of rules, and Zap Link products.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Select content (Step 1) ===== -->
-<section class="chapter alt" id="select">
-  <div class="chapter-head">
-    <span class="kicker">Step 1 of 2</span>
-    <h2>Select Posts or Stories</h2>
-    <p class="chapter-sub">
-      Choose which content the automation watches. Tick one or more items, then tap <strong>Next</strong>.
-    </p>
-  </div>
-
-  <div class="dual">
-    <figure class="shot">
-      <div class="phone phone-sm">
-        <img src="assets/screens/04-select-posts.jpeg" alt="Select Posts step with one post selected" />
-      </div>
-      <figcaption>Posts / Reels — “Select Posts”</figcaption>
-    </figure>
-    <figure class="shot">
-      <div class="phone phone-sm">
-        <img src="assets/screens/05-select-stories.jpeg" alt="Select Stories step with one story selected" />
-      </div>
-      <figcaption>Stories — “Select Stories”</figcaption>
-    </figure>
-  </div>
-
-  <div class="note-row">
-    <div class="note"><span>👆</span> Tap the checkbox to select. Use <strong>View on Instagram</strong> to confirm you picked the right post.</div>
-    <div class="note"><span>📑</span> More posts? Tap <strong>See more</strong> to load additional items.</div>
-    <div class="note"><span>🔢</span> Each active post counts toward your plan’s <strong>max active automation posts</strong>.</div>
-  </div>
-</section>
-
-<!-- ===== Rules (Step 2) ===== -->
-<section class="chapter" id="rules">
-  <div class="chapter-head">
-    <span class="kicker">Step 2 of 2 · Create New Zap</span>
-    <h2>Name it &amp; configure rules</h2>
-    <p class="chapter-sub">
-      Give the Zap an <strong>Automation Name</strong>, then add at least one <strong>rule</strong>.
-      <code>Create Automation</code> stays greyed out until a name and an active rule exist.
-    </p>
-  </div>
-
-  <div class="dual">
-    <figure class="shot">
-      <div class="phone phone-sm">
-        <img src="assets/screens/06-rules-empty-sandisk.jpeg" alt="Step 2 named SanDisk extreme pro with no rules yet" />
-      </div>
-      <figcaption>Example A — “SanDisk extreme pro” (we’ll use Zap Link)</figcaption>
-    </figure>
-    <figure class="shot">
-      <div class="phone phone-sm">
-        <img src="assets/screens/07-rules-empty-godrej.jpeg" alt="Step 2 named Godrej locks with no rules yet" />
-      </div>
-      <figcaption>Example B — “Godrej locks” (we’ll use a Direct Message)</figcaption>
-    </figure>
-  </div>
-  <p class="chapter-sub" style="margin-top:18px">
-    Either way the rules list starts empty and <code>Create Automation</code> is greyed out. Tap
-    <span class="pill">+ Add Rule</span> to begin.
-  </p>
-
-  <div class="split-copy wide">
-    <h3>Anatomy of a rule</h3>
-    <p>Tap <span class="pill">+ Add Rule</span> to open the <strong>New Rule</strong> form. A rule is made of:</p>
-    <ul class="ticks two-col">
-      <li><strong>Trigger Keywords</strong> — words that fire the automation (added one-by-one with the <b>+</b> icon).</li>
-      <li><strong>Comment Replies</strong> — optional public replies posted under the comment.</li>
-      <li><strong>A DM payload</strong> — either a <strong>Direct Message</strong> or a <strong>Zap Link</strong>.</li>
-    </ul>
-    <div class="callout callout-info">
-      <span class="callout-icon">🔁</span>
-      <div>Comment reply <em>or</em> message can be optional — but <strong>not both empty</strong>. One of them must carry content.</div>
-    </div>
-  </div>
-
-  <h3 class="mini-head">① Trigger keywords &amp; comment replies</h3>
-  <div class="split reverse">
-    <figure class="shot">
-      <div class="phone phone-sm">
-        <img src="assets/screens/08-new-rule-keywords.jpeg" alt="New Rule form with keywords INFO LINK and a comment reply" />
-      </div>
-      <figcaption>“New Rule” — keywords + comment reply</figcaption>
-    </figure>
-    <div class="split-copy">
-      <ol class="steps">
-        <li>Type a keyword like <code>INFO</code>, <code>LINK</code>, <code>URL</code> and tap <b>+</b>. Each becomes a chip.</li>
-        <li>Add a <strong>Comment Reply</strong> (e.g. “Please check your dm”) and tap <b>+</b>. Add several to rotate randomly.</li>
-        <li>Pick the DM type below: <strong>Direct Message</strong> or <strong>⚡ Zap Link</strong>.</li>
-      </ol>
-      <div class="callout callout-warn">
-        <span class="callout-icon">⚠️</span>
-        <div>Keyword count, comment replies and rules per Zap are all capped by your plan — you’ll see an
-        <em>Upgrade</em> prompt when you hit a limit.</div>
-      </div>
-    </div>
-  </div>
-
-  <h3 class="mini-head">② Option A — Direct Message</h3>
-  <div class="split">
-    <figure class="shot">
-      <div class="phone phone-sm">
-        <img src="assets/screens/09-new-rule-dm.jpeg" alt="New Rule with Direct Message text filled in, 146/800 characters" />
-      </div>
-      <figcaption>Direct Message tab — free text up to 800 chars</figcaption>
-    </figure>
-    <div class="split-copy">
-      <h3>A plain private message</h3>
-      <p>On the <strong>Direct Message</strong> tab, write the private text sent to the commenter. It can include
-        text, emojis and <strong>any clickable link</strong> (Google Drive, a product page, docs, etc.).</p>
-      <pre class="dm-sample">Heyy :)
-As promised, here’s the link for you to check out Jelly UI ⬇️
-https://docs.swmansion.com/TypeGPU/examples/#example=rendering--jelly-switch</pre>
-      <p class="muted">A live character counter (<code>0/800</code>) keeps you within the limit.</p>
-    </div>
-  </div>
-
-  <div class="split reverse">
-    <figure class="shot">
-      <div class="phone phone-sm">
-        <img src="assets/screens/11-rule-dm-preview.jpeg" alt="Configured rule card showing Comment Replies and DM Message" />
-      </div>
-      <figcaption>The saved rule — Comment Reply + DM Message</figcaption>
-    </figure>
-    <div class="split-copy">
-      <h3>After “Add Rule”</h3>
-      <p>The rule collapses into a summary card showing its keyword chips, the comment reply, and the DM body.
-        Use the <strong>toggle</strong> to activate/deactivate it, the <strong>pencil</strong> to edit, or the
-        <strong>trash</strong> to remove it.</p>
-      <a class="btn btn-ghost" href="#zaplink">Now see the Zap Link option →</a>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Zap Link ===== -->
-<section class="chapter zaplink-chapter" id="zaplink">
-  <div class="chapter-head">
-    <span class="kicker">⚡ The star feature</span>
-    <h2>Option B — Zap&nbsp;Link product cards</h2>
-    <p class="chapter-sub">
-      Instead of plain text, <strong>Zap Link</strong> sends rich product cards. Paste a product URL and
-      ClanConnect <strong>auto-fetches</strong> the image, title, brand, price and discount.
-    </p>
-  </div>
-
-  <div class="split">
-    <figure class="shot featured">
-      <div class="phone phone-sm">
-        <img src="assets/screens/10-new-rule-zaplink.jpeg" alt="Zap Link tab with a fetched SanDisk product card" />
-      </div>
-      <figcaption>⚡ Zap Link tab — paste URL, card auto-fills</figcaption>
-    </figure>
-    <div class="split-copy">
-      <h3>How to add a product</h3>
-      <ol class="steps">
-        <li>In the rule form, switch to the <strong>⚡ Zap Link</strong> tab.</li>
-        <li>Paste a product URL into <em>https://brand.com/product/…</em> and tap <b>+</b>.</li>
-        <li>The card auto-populates — e.g. <strong>SanDisk Extreme Pro Portable SSD</strong>,
-          <span class="pill pill-green">12% OFF</span> <strong>INR 23919</strong>.</li>
-        <li>You can manually tweak name, brand, price &amp; discount text.</li>
-        <li>Add <strong>up to 10 products</strong> per rule (plan-dependent). At least one is required.</li>
-        <li>Tap <strong>Add Rule</strong>.</li>
-      </ol>
-      <div class="callout callout-warn">
-        <span class="callout-icon">🔒</span>
-        <div>Zap Link can be gated by plan. On unsupported plans the tab shows an <em>“not available on your
-        current plan”</em> message with an upgrade link.</div>
-      </div>
-    </div>
-  </div>
-
-  <div class="split reverse">
-    <figure class="shot">
-      <div class="phone phone-sm">
-        <img src="assets/screens/12-rule-zaplink-preview.jpeg" alt="Saved rule showing Zap Link with 1 product link" />
-      </div>
-      <figcaption>Saved Zap Link rule — “1 product link”</figcaption>
-    </figure>
-    <div class="split-copy">
-      <h3>Zap Link vs Direct Message</h3>
-      <table class="cmp">
-        <tr><th></th><th>Direct Message</th><th>⚡ Zap Link</th></tr>
-        <tr><td>Best for</td><td>A single link / note</td><td>Selling products</td></tr>
-        <tr><td>Content</td><td>Free text + links</td><td>Auto-fetched product cards</td></tr>
-        <tr><td>Shows</td><td>Your typed message</td><td>Image · price · discount</td></tr>
-        <tr><td>Quantity</td><td>One message (≤800 chars)</td><td>Up to 10 products</td></tr>
-      </table>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Publish ===== -->
-<section class="chapter alt" id="publish">
-  <div class="chapter-head">
-    <span class="kicker">Go live</span>
-    <h2>Create the automation &amp; manage it</h2>
-    <p class="chapter-sub">
-      With a name and at least one active rule, <strong>Create Automation</strong> turns solid — tap it to publish.
-      You’ll land on <strong>My Zaps</strong>.
-    </p>
-  </div>
-
-  <div class="dual">
-    <figure class="shot">
-      <div class="phone phone-sm">
-        <img src="assets/screens/13-my-zaps-sandisk.jpeg" alt="My Zaps list showing the new SanDisk Zap Link automation as Active" />
-      </div>
-      <figcaption>Your new Zap appears as <b>Active</b></figcaption>
-    </figure>
-    <figure class="shot">
-      <div class="phone phone-sm">
-        <img src="assets/screens/14-my-zaps-list.jpeg" alt="My Zaps list with multiple automations" />
-      </div>
-      <figcaption>All Zaps · Interactions · Settings tabs</figcaption>
-    </figure>
-  </div>
-
-  <div class="split-copy wide">
-    <h3>On the My Zaps screen you can</h3>
-    <ul class="ticks two-col">
-      <li><strong>Toggle</strong> a Zap on/off without deleting it.</li>
-      <li><strong>Edit</strong> (pencil) to reopen the wizard.</li>
-      <li><strong>Delete</strong> (trash) a Zap you no longer need.</li>
-      <li>Filter with <strong>“Show active Zaps only”</strong>.</li>
-      <li>See <strong>keywords</strong>, source (Posts/Stories), rule count &amp; trigger count.</li>
-      <li>Open <strong>Interactions</strong> to view what got triggered.</li>
-    </ul>
-  </div>
-
-  <div class="callout callout-success">
-    <span class="callout-icon">✅</span>
-    <div><strong>That’s it — you’re live.</strong> The next time someone comments your keyword, they’ll get an
-    instant comment reply and a DM (text or Zap Link product card), fully automatically.</div>
-  </div>
-</section>
-
-</main>
-
-<footer class="footer">
-  <p>ClanConnect · Zap (Instagram DM Automation) — Internal walkthrough guide.</p>
-  <p class="muted">Screens captured from the ClanConnect mobile app. Primary color #1774B2.</p>
-</footer>
-
-<!-- ===== Lightbox ===== -->
-<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
-  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
-  <img id="lbImg" src="" alt="Expanded screenshot" />
-</div>
-
-<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
-
-<script src="script.js"></script>
 </body>
 </html>

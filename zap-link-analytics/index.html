@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ClanConnect Zap — Zap Link Analytics Guide</title>
+<meta name="description" content="A step-by-step interactive guide to Zap Link Analytics in the ClanConnect app — DMs, clicks, top products, automations and earnings." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ===== Progress bar ===== -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ===== Top nav ===== -->
+<header class="topbar">
+  <a class="brand" href="#top">
+    <span class="bolt" aria-hidden="true">📊</span>
+    <span class="brand-text">Zap Link <strong>Analytics</strong></span>
+  </a>
+  <nav class="topnav" id="topnav">
+    <a href="#overview">Overview</a>
+    <a href="#open">Open it</a>
+    <a href="#links">My Zap Links</a>
+    <a href="#products">Products</a>
+    <a href="#automations">Automations</a>
+    <a href="#earnings">Earnings</a>
+    <a href="#interactions">Interactions</a>
+    <a href="../index.html">← Guides</a>
+  </nav>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+</header>
+
+<!-- ===== Hero ===== -->
+<section class="hero" id="top">
+  <div class="hero-inner">
+    <div class="hero-copy">
+      <span class="eyebrow">Influencer Tools · Zap · Interactions</span>
+      <h1>Reading your <span class="grad">Zap Link Analytics</span></h1>
+      <p class="lead">
+        Once your Zaps are live, <strong>Zap Link Analytics</strong> shows how your shoppable product
+        carousels are performing — from <strong>DMs sent</strong> all the way to <strong>clicks</strong>,
+        your <strong>top products</strong>, per-automation results and your <strong>earnings</strong>.
+      </p>
+      <div class="hero-cta">
+        <a class="btn btn-primary" href="#overview">Start the tour</a>
+        <a class="btn btn-ghost" href="#interactions">Jump to Interactions →</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>4</strong><span>funnel metrics</span></div>
+        <div><strong>4</strong><span>analytics tabs</span></div>
+        <div><strong>1</strong><span>tap per interaction</span></div>
+      </div>
+    </div>
+    <div class="hero-phone">
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <img src="assets/screens/02-my-zap-links.png" alt="Zap Link Performance funnel — DMs Sent, DMs Opened, Unique Clicks, Total Clicks" />
+      </div>
+      <div class="phone-glow"></div>
+    </div>
+  </div>
+</section>
+
+<main>
+
+<!-- ===== Cheat sheet ===== -->
+<section class="chapter recap" id="recap">
+  <div class="chapter-head">
+    <span class="kicker">Cheat sheet</span>
+    <h2>The whole dashboard at a glance</h2>
+  </div>
+  <ol class="recap-list">
+    <li><span>1</span>Open <b>Zap</b> → <b>My Zaps</b> → <b>Interactions</b>.</li>
+    <li><span>2</span>Set a <b>date range</b> and tap <b>Apply</b>.</li>
+    <li><span>3</span><b>My Zap Links</b> — the funnel: DMs Sent → Opened → Unique &amp; Total Clicks.</li>
+    <li><span>4</span><b>My Zap Linked Products</b> — your top products by clicks.</li>
+    <li><span>5</span><b>Automations</b> — triggers, opens, clicks &amp; rules per Zap.</li>
+    <li><span>6</span><b>My Earnings</b> — total, orders, commission, pending &amp; top earners.</li>
+    <li><span>7</span>Tap a Zap’s <b>View →</b> to open <b>Interaction Tracking</b>.</li>
+    <li><span>8</span>Tap any interaction row to see its <b>flow</b> + full <b>catalogue</b> with clicks.</li>
+  </ol>
+</section>
+
+<!-- ===== Overview ===== -->
+<section class="chapter" id="overview">
+  <div class="chapter-head">
+    <span class="kicker">The big picture</span>
+    <h2>What Zap Link Analytics measures</h2>
+    <p class="chapter-sub">
+      Every Zap Link you send is tracked end-to-end. Analytics turns those events into a simple
+      funnel so you can see exactly where people drop off — and which products win.
+    </p>
+  </div>
+
+  <div class="flow">
+    <div class="flow-step"><span class="flow-num">1</span><p>Your Zap <strong>sends a DM</strong> with a product carousel.</p></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><span class="flow-num">2</span><p>The follower <strong>opens the DM</strong>.</p></div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-step"><span class="flow-num">3</span><p>They <strong>tap a product</strong> — counted as a click (and a unique click per person).</p></div>
+  </div>
+
+  <div class="callout callout-info">
+    <span class="callout-icon">💡</span>
+    <div>
+      <strong>One date range, four views.</strong> The same range powers all tabs —
+      <b>My Zap Links</b>, <b>My Zap Linked Products</b>, <b>Automations</b> and <b>My Earnings</b> —
+      so every number you see is for the same window.
+    </div>
+  </div>
+</section>
+
+<!-- ===== Open it ===== -->
+<section class="chapter alt" id="open">
+  <div class="chapter-head">
+    <span class="kicker">Getting there</span>
+    <h2>Open the analytics panel</h2>
+    <p class="chapter-sub">
+      Analytics lives under the <strong>Interactions</strong> tab of <strong>My Zaps</strong>.
+      Pick a start and end date, then tap <strong>Apply</strong>.
+    </p>
+  </div>
+
+  <div class="split">
+    <figure class="shot">
+      <div class="phone phone-sm">
+        <img src="assets/screens/01-analytics-home.png" alt="Zap Link Analytics header with date range and Apply button" />
+      </div>
+      <figcaption>My Zaps → Interactions → <b>Zap Link Analytics</b></figcaption>
+    </figure>
+    <div class="split-copy">
+      <h3>The controls</h3>
+      <ol class="steps">
+        <li>Tap the <strong>Zap</strong> tab, then <span class="pill">My Zaps</span>.</li>
+        <li>Switch to the <span class="pill pill-blue">Interactions</span> sub-tab (next to <em>All Zaps</em> &amp; <em>Settings</em>).</li>
+        <li>Choose a <strong>start</strong> and <strong>end</strong> date.</li>
+        <li>Tap <span class="pill">Apply</span> — the ↻ button reloads the current range.</li>
+      </ol>
+      <div class="callout callout-info">
+        <span class="callout-icon">📅</span>
+        <div>Numbers are compared against the <strong>previous equal period</strong>, so each metric can show a
+          <em>“% of prev”</em> trend (e.g. <b>166.7% of prev</b>).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Tab 1: My Zap Links ===== -->
+<section class="chapter" id="links">
+  <div class="chapter-head">
+    <span class="kicker">Tab 1 · ZAP LINK PERFORMANCE</span>
+    <h2>My Zap Links — the funnel</h2>
+    <p class="chapter-sub">
+      Four cards summarise how your Zap Link auto-replies performed in the selected dates. Each card
+      shows the total, a coloured bar, and the trend vs the previous period.
+    </p>
+  </div>
+
+  <div class="split reverse">
+    <figure class="shot featured">
+      <div class="phone phone-sm">
+        <img src="assets/screens/02-my-zap-links.png" alt="DMs Sent 6, DMs Opened 6, Unique Clicks 10, Total Clicks 18" />
+      </div>
+      <figcaption>Zap Link Performance — four funnel metrics</figcaption>
+    </figure>
+    <div class="split-copy">
+      <h3>What each metric means</h3>
+      <ul class="ticks">
+        <li><strong>DMs Sent</strong> — how many Zap Link DMs your automations delivered.</li>
+        <li><strong>DMs Opened</strong> — how many of those DMs the recipient opened.</li>
+        <li><strong>Unique Clicks</strong> — distinct people who tapped a product.</li>
+        <li><strong>Total Clicks</strong> — every product tap (one person can click many).</li>
+      </ul>
+      <div class="callout callout-success">
+        <span class="callout-icon">📈</span>
+        <div>Read it top-to-bottom as a funnel: <b>Sent → Opened → Unique → Total</b>. A healthy gap between
+          <em>Unique</em> and <em>Total</em> clicks means people are browsing several products.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Tab 2: Linked products ===== -->
+<section class="chapter alt" id="products">
+  <div class="chapter-head">
+    <span class="kicker">Tab 2 · TOP PERFORMING PRODUCTS</span>
+    <h2>My Zap Linked Products</h2>
+    <p class="chapter-sub">
+      A ranked leaderboard of the products inside your Zap Links — ordered by clicks, so you instantly
+      see what your audience wants.
+    </p>
+  </div>
+
+  <div class="split">
+    <figure class="shot">
+      <div class="phone phone-sm">
+        <img src="assets/screens/03-linked-products.png" alt="Top performing products ranked with clicks and unique clicks" />
+      </div>
+      <figcaption>Ranked products with clicks &amp; unique clicks</figcaption>
+    </figure>
+    <div class="split-copy">
+      <h3>Each row shows</h3>
+      <ul class="ticks">
+        <li>A <strong>rank badge</strong> (1, 2, 3 …) — the top three are highlighted.</li>
+        <li>The product <strong>image</strong>, <strong>name</strong> and <strong>brand</strong>.</li>
+        <li><strong>Clicks</strong> — total taps on that product.</li>
+        <li><strong>Unique</strong> — how many different people tapped it.</li>
+      </ul>
+      <div class="callout callout-info">
+        <span class="callout-icon">🏆</span>
+        <div>Use this to decide which products to feature more — or to add the winners to fresh Zaps.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Tab 3: Automations ===== -->
+<section class="chapter" id="automations">
+  <div class="chapter-head">
+    <span class="kicker">Tab 3 · YOUR AUTOMATIONS</span>
+    <h2>Automations — per-Zap results</h2>
+    <p class="chapter-sub">
+      The same funnel, broken down for <strong>each automation</strong> you’ve created — including
+      ones you’ve since deleted, so historical numbers never disappear.
+    </p>
+  </div>
+
+  <div class="split reverse">
+    <figure class="shot">
+      <div class="phone phone-sm">
+        <img src="assets/screens/04-automations.png" alt="Automation cards with triggers, opens, clicks and rules" />
+      </div>
+      <figcaption>One card per automation · <b>View →</b> opens its interactions</figcaption>
+    </figure>
+    <div class="split-copy">
+      <h3>On every automation card</h3>
+      <ul class="ticks">
+        <li>Thumbnail + name, a <span class="pill pill-green">Live</span> or <span class="pill">Deleted</span> badge and the media type (<em>post</em>).</li>
+        <li><strong>Triggers</strong> — how many times it fired.</li>
+        <li><strong>Opens</strong> — DMs opened.</li>
+        <li><strong>Clicks</strong> — product taps.</li>
+        <li><strong>Rules</strong> — number of keyword rules in that Zap.</li>
+      </ul>
+      <div class="callout callout-info">
+        <span class="callout-icon">👉</span>
+        <div>Tap <strong>View →</strong> on any card to open <strong>Interaction Tracking</strong> for that Zap
+          (covered below).</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Tab 4: Earnings ===== -->
+<section class="chapter alt" id="earnings">
+  <div class="chapter-head">
+    <span class="kicker">Tab 4 · MY EARNINGS</span>
+    <h2>My Earnings — money from your Zaps</h2>
+    <p class="chapter-sub">
+      When a Zap Link click turns into a sale, the commission shows up here — totals, orders and a
+      breakdown of your best earners.
+    </p>
+  </div>
+
+  <div class="dual">
+    <figure class="shot">
+      <div class="phone phone-sm">
+        <img src="assets/screens/05-my-earnings.png" alt="Total earnings, orders, average commission and pending earnings" />
+      </div>
+      <figcaption>Total Earnings · Orders · Avg Commission · Pending</figcaption>
+    </figure>
+    <figure class="shot">
+      <div class="phone phone-sm">
+        <img src="assets/screens/06-my-earnings-detail.png" alt="Top earning products and recent earnings activity" />
+      </div>
+      <figcaption>Top Earning Products &amp; Recent Earnings</figcaption>
+    </figure>
+  </div>
+
+  <div class="note-row">
+    <div class="note"><span>💰</span> <strong>Total Earnings</strong> for the period, with how much more/less than the previous one.</div>
+    <div class="note"><span>🛍️</span> <strong>Orders</strong> and <strong>Avg Commission</strong> per order.</div>
+    <div class="note"><span>⏳</span> <strong>Pending Earnings</strong> — confirmed but not yet paid out.</div>
+    <div class="note"><span>⭐</span> <strong>Top Earning Products</strong> (this period) &amp; <strong>Recent Earnings</strong> with each item’s status (<em>pending</em> / <em>paid</em>).</div>
+  </div>
+</section>
+
+<!-- ===== Interactions ===== -->
+<section class="chapter zaplink-chapter" id="interactions">
+  <div class="chapter-head">
+    <span class="kicker">⚡ Drill-down</span>
+    <h2>Interaction Tracking — Zap-link</h2>
+    <p class="chapter-sub">
+      Opening a Zap’s <strong>View →</strong> reveals the raw activity: <strong>one row per user
+      interaction</strong>. Tap a row to see the exact message sent and the full product catalogue.
+    </p>
+  </div>
+
+  <div class="split">
+    <figure class="shot featured">
+      <div class="phone phone-sm">
+        <img src="assets/screens/07-interaction-list.png" alt="Activity list — two interactions with DM Sent, Opened, products, clicks and date" />
+      </div>
+      <figcaption>Activity — one collapsed row per interaction</figcaption>
+    </figure>
+    <div class="split-copy">
+      <h3>Each activity row shows</h3>
+      <ul class="ticks">
+        <li>The <strong>post thumbnail</strong> + the commenter’s <strong>@username</strong> and their comment (e.g. “Clan”).</li>
+        <li><span class="pill pill-green">DM Sent</span> and <span class="pill pill-blue">Opened</span> status badges.</li>
+        <li><strong>Products</strong> — how many were in that send.</li>
+        <li><strong>Clicks</strong> — taps from that one interaction (orange when &gt; 0).</li>
+        <li><strong>Date</strong> &amp; time of the trigger.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="split reverse">
+    <figure class="shot">
+      <div class="phone phone-sm">
+        <img src="assets/screens/08-interaction-detail.png" alt="Expanded interaction showing comment, reply, DM sent flow and product catalogue with clicks" />
+      </div>
+      <figcaption>Tap to expand — flow + catalogue</figcaption>
+    </figure>
+    <div class="split-copy">
+      <h3>Tap a row to expand</h3>
+      <p>The row opens to reveal two parts:</p>
+      <ol class="steps">
+        <li><strong>Interaction Flow</strong> — the journey: <span class="pill pill-blue">Comment</span> → <span class="pill">Reply</span> → <span class="pill pill-green">DM Sent</span>, each with its exact text.</li>
+        <li><strong>Catalogue</strong> — every product sent, with image, brand, <strong>price</strong>, discount, the tracked <strong>Short code</strong>, and the <strong>clicks</strong> that product earned <em>in this interaction</em>.</li>
+      </ol>
+      <div class="callout callout-info">
+        <span class="callout-icon">🔗</span>
+        <div>The <strong>Short code</strong> (e.g. <code>2075f6df</code>) is the product’s unique tracked link — it’s how
+          a tap gets attributed back to the right product and interaction.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Glossary ===== -->
+<section class="chapter alt" id="glossary">
+  <div class="chapter-head">
+    <span class="kicker">Reference</span>
+    <h2>Metric glossary</h2>
+  </div>
+  <div class="split-copy wide">
+    <table class="cmp">
+      <tr><th>Metric</th><th>Means</th></tr>
+      <tr><td>DMs Sent</td><td>Zap Link DMs delivered in the period.</td></tr>
+      <tr><td>DMs Opened</td><td>Of those DMs, how many were opened.</td></tr>
+      <tr><td>Unique Clicks</td><td>Distinct people who tapped any product.</td></tr>
+      <tr><td>Total Clicks</td><td>All product taps (a person can click several).</td></tr>
+      <tr><td>% of prev</td><td>Trend vs the previous equal-length period.</td></tr>
+      <tr><td>Triggers</td><td>Times an automation fired.</td></tr>
+      <tr><td>Opens / Clicks / Rules</td><td>Per-automation opens, product taps, and keyword rules.</td></tr>
+      <tr><td>Short code</td><td>A product’s unique tracked link used for click attribution.</td></tr>
+      <tr><td>Pending Earnings</td><td>Commission confirmed but not yet paid.</td></tr>
+    </table>
+  </div>
+
+  <div class="callout callout-success">
+    <span class="callout-icon">✅</span>
+    <div><strong>That’s the full picture.</strong> Sent → Opened → Clicks → Earnings, plus a per-product and
+      per-automation breakdown — everything you need to see what’s working and double down on it.</div>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <p>ClanConnect · Zap Link Analytics — Internal walkthrough guide.</p>
+  <p class="muted">Screens captured from the ClanConnect mobile app. Primary color #1774B2. · <a href="../index.html">All guides</a></p>
+</footer>
+
+<!-- ===== Lightbox ===== -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true">
+  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+  <img id="lbImg" src="" alt="Expanded screenshot" />
+</div>
+
+<button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
+<script src="script.js"></script>
+</body>
+</html>
