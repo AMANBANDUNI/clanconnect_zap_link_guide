@@ -28,19 +28,43 @@ and `assets/screens/`), so you can open or ship either one on its own.
 
 ```
 .
-├── index.html                  # hub linking to both guides
+├── index.html                  # hub linking to all guides
 ├── README.md
-├── zap-link/                   # "Using Zap Link" guide
+├── zap-link/                   # "Zap Tour" guide (user-facing)
 │   ├── index.html
 │   ├── styles.css              # styling (brand color #1774B2)
 │   ├── script.js               # scroll-spy, lightbox, reveals
 │   └── assets/screens/         # app screenshots
-└── zap-link-analytics/         # "Zap Link Analytics" guide
-    ├── index.html
-    ├── styles.css
-    ├── script.js
-    └── assets/screens/
+├── zap-link-analytics/         # "Zap Link Analytics" guide (user-facing)
+│   ├── index.html
+│   ├── styles.css
+│   ├── script.js
+│   └── assets/screens/
+└── dev/                        # developer guides (password-protected)
+    ├── dev.css                 # shared dev styling
+    ├── crypto.js               # shared PBKDF2 + AES-GCM unlock
+    ├── zap-analytics/
+    │   ├── index.html          # lock-screen shell
+    │   └── content.enc.js      # AES-256-GCM encrypted content
+    └── affiliation/
+        ├── index.html
+        └── content.enc.js
 ```
+
+## Developer guides (password-protected)
+
+Two **internal architecture deep-dives** for engineers live under `dev/`. They are
+**AES-256-GCM encrypted** — the content is not in page source, and a wrong password reveals
+nothing (the team password derives the AES key via PBKDF2; decryption happens client-side).
+
+| Module | Covers |
+| --- | --- |
+| [`dev/zap-analytics/`](dev/zap-analytics/index.html) | **Zap Link Analytics internals** — the send→open→click→sale tracking pipeline, the `ig_zap_*` data model, the three influencer analytics endpoints, and the exact SQL behind every metric. |
+| [`dev/affiliation/`](dev/affiliation/index.html) | **Affiliation & Pixel internals** — the client pixel, the 11-table data model, `/pixel/event` ingestion, server-side clicks, `recordAffiliateConversion()` attribution, and the commission lifecycle. |
+
+> **Note:** decryption uses the Web Crypto API, which needs a **secure context** — serve over
+> **HTTPS or `localhost`** (Vercel is fine). Opening a dev guide via `file://` won't decrypt in
+> most browsers. The plaintext is never committed — only the encrypted `content.enc.js` blobs are.
 
 ## Features (both guides)
 

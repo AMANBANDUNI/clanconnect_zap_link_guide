@@ -1,0 +1,95 @@
+/* ===== ClanConnect — Developer guides (shared) ===== */
+:root{
+  --brand:#1774B2; --brand-2:#33b1e8; --ink:#0f2230; --muted:#5b6b78;
+  --bg:#f4f8fb; --card:#fff; --line:#e3edf4; --code-bg:#0e1b26; --code-ink:#d6e6f2;
+  --ok:#16a34a; --warn:#d97706; --err:#dc2626; --accent:#7c3aed;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:"Open Sans",system-ui,sans-serif;color:var(--ink);
+  background:radial-gradient(1200px 600px at 50% -10%, #e8f3fb, var(--bg));}
+a{color:var(--brand)}
+code{font-family:"SFMono-Regular",ui-monospace,Menlo,Consolas,monospace;font-size:.88em;
+  background:#eef5fa;border:1px solid var(--line);border-radius:5px;padding:1px 6px;color:#0b3a57}
+
+/* ---- Lock screen ---- */
+.lock{min-height:100vh;display:grid;place-items:center;padding:24px}
+.lock-card{background:var(--card);border:1px solid var(--line);border-radius:20px;max-width:440px;width:100%;
+  padding:38px 34px;text-align:center;box-shadow:0 16px 44px rgba(23,116,178,.12)}
+.lock-ico{width:62px;height:62px;border-radius:16px;display:grid;place-items:center;font-size:30px;margin:0 auto 18px;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#fff}
+.lock-card h1{font-family:"Poppins",sans-serif;font-size:24px;margin:0 0 6px}
+.lock-card p{color:var(--muted);margin:0 0 22px;font-size:15px;line-height:1.5}
+.lock-row{display:flex;gap:10px}
+.lock input{flex:1;padding:12px 14px;border:1px solid #cfe0ec;border-radius:11px;font-size:15px;outline:none}
+.lock input:focus{border-color:var(--brand);box-shadow:0 0 0 3px rgba(23,116,178,.14)}
+.lock button{padding:12px 18px;border:0;border-radius:11px;background:var(--brand);color:#fff;font-weight:700;cursor:pointer;font-size:15px}
+.lock button:disabled{opacity:.6;cursor:default}
+.lock-err{color:var(--err);font-size:13px;margin-top:12px;min-height:18px;font-weight:600}
+.lock-foot{color:var(--muted);font-size:12px;margin-top:20px}
+
+/* ---- Doc shell ---- */
+.doc{max-width:1080px;margin:0 auto;padding:0 22px 80px}
+.docbar{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);display:flex;align-items:center;gap:14px;padding:12px 22px;margin:0 -22px 0}
+.docbar .b{font-family:"Poppins",sans-serif;font-weight:800;display:flex;align-items:center;gap:8px}
+.docbar .b .dot{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;color:#fff;font-size:15px;
+  background:linear-gradient(135deg,var(--brand),var(--brand-2))}
+.docbar nav{margin-left:auto;display:flex;gap:16px;flex-wrap:wrap;font-size:14px;font-weight:600}
+.docbar nav a{color:#3a5564;text-decoration:none}
+.docbar nav a:hover{color:var(--brand)}
+@media(max-width:820px){.docbar nav{display:none}}
+
+.hero-d{padding:46px 0 8px}
+.hero-d .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--brand);background:#e8f3fb;padding:5px 12px;border-radius:999px}
+.hero-d h1{font-family:"Poppins",sans-serif;font-weight:800;font-size:clamp(28px,5vw,42px);margin:16px 0 8px;line-height:1.1}
+.hero-d .lead{color:var(--muted);font-size:18px;max-width:760px;line-height:1.6;margin:0}
+
+h2.sec{font-family:"Poppins",sans-serif;font-size:26px;margin:54px 0 6px;padding-top:10px;border-top:1px solid var(--line)}
+h2.sec .n{color:var(--brand);font-weight:800;margin-right:8px}
+h3.sub{font-family:"Poppins",sans-serif;font-size:19px;margin:28px 0 8px}
+p,li{line-height:1.65}
+.muted{color:var(--muted)}
+.tag{display:inline-block;font-size:11.5px;font-weight:700;border-radius:999px;padding:2px 9px;letter-spacing:.02em}
+.tag.get{background:#e8f7ee;color:#138a4e} .tag.post{background:#eef0ff;color:#4f46e5}
+.tag.tbl{background:#fff3e6;color:#b25a14} .tag.fn{background:#f1eafe;color:#7c3aed}
+
+/* code blocks */
+pre{background:var(--code-bg);color:var(--code-ink);border-radius:12px;padding:16px 18px;overflow:auto;
+  font-family:"SFMono-Regular",ui-monospace,Menlo,Consolas,monospace;font-size:13px;line-height:1.55;
+  border:1px solid #16303f;box-shadow:inset 0 0 0 1px rgba(255,255,255,.02)}
+pre .c{color:#6b8aa0} pre .k{color:#8fd3ff} pre .s{color:#b8e6a0} pre .t{color:#ffd27a}
+.codecap{font-size:12px;color:var(--muted);margin:14px 0 4px;font-weight:600;text-transform:uppercase;letter-spacing:.04em}
+
+/* schema table */
+table.schema{width:100%;border-collapse:collapse;margin:14px 0;font-size:14px;background:var(--card);
+  border:1px solid var(--line);border-radius:12px;overflow:hidden}
+table.schema th,table.schema td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+table.schema th{background:#f0f6fb;font-size:12px;text-transform:uppercase;letter-spacing:.04em;color:#3a5564}
+table.schema tr:last-child td{border-bottom:0}
+table.schema td code{background:transparent;border:0;padding:0;color:#0b3a57;font-weight:600}
+
+/* cards / callouts */
+.callout{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);
+  border-left:4px solid var(--brand);border-radius:12px;padding:14px 16px;margin:18px 0}
+.callout.info{border-left-color:var(--brand)} .callout.warn{border-left-color:var(--warn)}
+.callout.ok{border-left-color:var(--ok)} .callout.err{border-left-color:var(--err)}
+.callout .i{font-size:18px;line-height:1.4}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:16px 0}
+@media(max-width:760px){.grid2{grid-template-columns:1fr}}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 18px}
+.box h4{margin:0 0 6px;font-family:"Poppins",sans-serif;font-size:15px}
+
+/* pipeline */
+.pipe{display:flex;flex-direction:column;gap:0;margin:16px 0}
+.pipe .step{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px}
+.pipe .step b{color:var(--brand)}
+.pipe .arrow{align-self:center;color:#9fb6c6;font-size:18px;padding:4px 0}
+.path{font-family:"SFMono-Regular",ui-monospace,monospace;font-size:12.5px;background:#eef5fa;border:1px solid var(--line);
+  border-radius:6px;padding:1px 7px;color:#0b3a57;white-space:nowrap}
+
+.footer-d{margin-top:60px;padding-top:22px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+.to-top{position:fixed;right:18px;bottom:18px;width:42px;height:42px;border-radius:50%;border:0;cursor:pointer;
+  background:var(--brand);color:#fff;font-size:18px;box-shadow:0 8px 20px rgba(23,116,178,.3);opacity:0;transition:.2s}
+.to-top.show{opacity:1}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="robots" content="noindex, nofollow" />
+<title>Affiliation &amp; Pixel — Dev Guide (protected)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../dev.css" />
+</head>
+<body>
+
+<!-- Lock screen -->
+<div class="lock" id="lock">
+  <div class="lock-card">
+    <div class="lock-ico">🔒</div>
+    <h1>Affiliation &amp; Pixel</h1>
+    <p>Internal developer guide. Enter the team password to decrypt and read.</p>
+    <div class="lock-row">
+      <input id="pw" type="password" placeholder="Password" autocomplete="off" autocapitalize="off" spellcheck="false" />
+      <button id="unlockBtn">Unlock</button>
+    </div>
+    <div class="lock-err" id="lockErr"></div>
+    <div class="lock-foot">Content is AES-256 encrypted — a wrong password reveals nothing.</div>
+  </div>
+</div>
+
+<!-- Decrypted content gets injected here -->
+<div class="doc" id="doc" style="display:none"></div>
+
+<script src="content.enc.js"></script>
+<script src="../crypto.js"></script>
+</body>
+</html>
